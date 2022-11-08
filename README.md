@@ -1,2 +1,3 @@
 # FactoryApp
-🏗️ A mobile application that generates other apps easily based on criteria - Idea 🏗️
+
+This app is a work in progress - an app made to generate other apps based on selection criteria

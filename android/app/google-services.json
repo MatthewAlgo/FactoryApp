@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "838987827184",
+    "firebase_url": "https://factoryapp-firebase-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "factoryapp-firebase",
+    "storage_bucket": "factoryapp-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838987827184:android:8fce05a0a15296d7be7f35",
+        "android_client_info": {
+          "package_name": "com.example.login_screen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838987827184-vmjbih91rn5sb81a9luus4sd3opcvnqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHSTH5yqQpTJzNYml6Wzbx_A8mrgqEp6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838987827184-vmjbih91rn5sb81a9luus4sd3opcvnqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
