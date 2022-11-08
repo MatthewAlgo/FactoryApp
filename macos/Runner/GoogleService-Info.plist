@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>838987827184-a279mpka1vnonkjdmapcs6qui24arc6p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.838987827184-a279mpka1vnonkjdmapcs6qui24arc6p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAcJ-iznaPX-khncJZKYcLP_tPegbaKlco</string>
+	<key>GCM_SENDER_ID</key>
+	<string>838987827184</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.factoryapp</string>
+	<key>PROJECT_ID</key>
+	<string>factoryapp-firebase</string>
+	<key>STORAGE_BUCKET</key>
+	<string>factoryapp-firebase.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:838987827184:ios:e403dbc038476f66be7f35</string>
+	<key>DATABASE_URL</key>
+	<string>https://factoryapp-firebase-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
