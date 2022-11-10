@@ -29,15 +29,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ionicons: ^0.1.2
+  ionicons: ^0.2.1
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  firebase_auth: ^3.10.0
-  firebase_core: ^1.23.0
+  firebase_auth: ^4.1.1
+  firebase_core: ^2.1.1
+  firebase_core_platform_interface: ^4.5.1
+  firebase_messaging: ^14.0.4 # previously I only had this which was pulling in 4.5.2 which you do not want
+  new_gradient_app_bar: ^0.2.0
   get: ^4.6.5
+  floating_navigation_bar: ^0.0.5
+  eva_icons_flutter: ^3.1.0
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:

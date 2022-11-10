@@ -19,3 +19,6 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Avoid firebase integration because of in-file API Keys
+firebase_options.dart
