@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:login_screen/controller/auth_controller.dart';
+import 'package:login_screen/screens/home_screen/home_screen.dart';
+import 'package:login_screen/screens/splash_screen/flutterlogo.dart';
+import 'package:login_screen/screens/splash_screen/splash_screen.dart';
 
 import 'screens/login_screen/login_screen.dart';
 import 'utils/constants.dart';
@@ -29,7 +32,12 @@ class MyApp extends StatelessWidget {
               fontFamily: 'Montserrat',
             ),
       ),
-      home: const LoginScreen(),
+      home: const Splash(),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/home': (context) => const HomeScreen(),
+        '/splash': (context) => const FlutterScreen(),
+      },
     );
   }
 }

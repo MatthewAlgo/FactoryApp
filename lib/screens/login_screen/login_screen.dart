@@ -1,6 +1,8 @@
 import 'dart:math' as math;
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 import 'components/center_widget/center_widget.dart';
 import 'components/login_content.dart';
@@ -56,23 +58,36 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
 
-    return Scaffold(
-      body: Stack(
-        children: [
-          Positioned(
-            top: -160,
-            left: -30,
-            child: topWidget(screenSize.width),
-          ),
-          Positioned(
-            bottom: -180,
-            left: -40,
-            child: bottomWidget(screenSize.width),
-          ),
-          CenterWidget(size: screenSize),
-          const LoginContent(),
-        ],
-      ),
-    );
+    // If the user is logged in on firebase, then we will navigate to the home screen
+    if (FirebaseAuth.instance.currentUser != null) {
+      SchedulerBinding.instance.addPostFrameCallback((_) {
+        Navigator.pushReplacementNamed(context, '/home');
+      });
+      // Return a beautiful loading screen
+      return Scaffold(
+        body: Center(
+          child: const CircularProgressIndicator(),
+        ),
+      );
+    } else {
+      return Scaffold(
+        body: Stack(
+          children: [
+            Positioned(
+              top: -160,
+              left: -30,
+              child: topWidget(screenSize.width),
+            ),
+            Positioned(
+              bottom: -180,
+              left: -40,
+              child: bottomWidget(screenSize.width),
+            ),
+            CenterWidget(size: screenSize),
+            const LoginContent(),
+          ],
+        ),
+      );
+    }
   }
 }
