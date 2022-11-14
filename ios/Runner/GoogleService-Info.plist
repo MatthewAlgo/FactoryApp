@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>838987827184-hq6r45p2ipvlq6sjkdd3mgld67s599g1.apps.googleusercontent.com</string>
+	<string>838987827184-a279mpka1vnonkjdmapcs6qui24arc6p.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.838987827184-hq6r45p2ipvlq6sjkdd3mgld67s599g1</string>
+	<string>com.googleusercontent.apps.838987827184-a279mpka1vnonkjdmapcs6qui24arc6p</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAcJ-iznaPX-khncJZKYcLP_tPegbaKlco</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.loginScreen</string>
+	<string>com.example.factoryapp</string>
 	<key>PROJECT_ID</key>
 	<string>factoryapp-firebase</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:838987827184:ios:e23ae39278c186bcbe7f35</string>
+	<string>1:838987827184:ios:e403dbc038476f66be7f35</string>
 	<key>DATABASE_URL</key>
 	<string>https://factoryapp-firebase-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
