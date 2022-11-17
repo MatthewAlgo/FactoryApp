@@ -1,4 +1,4 @@
-import 'package:factoryapp/login/Screens/Welcome/welcome_screen.dart';
+import 'package:factoryapp/login/screens/Welcome/welcome_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
