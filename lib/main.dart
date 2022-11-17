@@ -1,6 +1,6 @@
 import 'package:factoryapp/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:factoryapp/login/Screens/Welcome/welcome_screen.dart';
+import 'package:factoryapp/login/screens/Welcome/welcome_screen.dart';
 import 'package:factoryapp/login/constants.dart';
 
 import 'package:get/get.dart';
@@ -10,9 +10,18 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+// Import shared preferences
+import 'package:shared_preferences/shared_preferences.dart';
+
+int initScreen = 0;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
+  // Await the instance of shared preferences
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  initScreen = await prefs.getInt('initScreen') ?? 0;
+  await prefs.setInt('initScreen', 1);
 
   runApp(const MyApp());
 }
@@ -31,6 +40,8 @@ class MyApp extends StatelessWidget {
       title: 'FactoryApp',
       theme: ThemeData(
           primaryColor: kPrimaryColor,
+          // Add a cool font to the app
+          fontFamily: 'Raleway',
           scaffoldBackgroundColor: Colors.white,
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(

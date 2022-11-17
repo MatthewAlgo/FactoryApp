@@ -1,6 +1,10 @@
-import 'package:factoryapp/login/Screens/Welcome/welcome_screen.dart';
+import 'package:factoryapp/login/screens/Welcome/welcome_screen.dart';
+import 'package:factoryapp/main.dart';
 import 'package:factoryapp/splash/flutterlogo.dart';
 import 'package:flutter/material.dart';
+
+// Import onboarding screen 1
+import 'package:factoryapp/onboarding/screen_one.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -18,12 +22,20 @@ class _SplashState extends State<Splash> {
 
   void _navigateHome() async {
     await Future.delayed(const Duration(seconds: 3), () {});
-    // Push the welcome screen
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => WelcomeScreen()),
-      (Route<dynamic> route) => false,
-    );
+    // If the user starts the app for the first time, show the onboarding screen
+    if (initScreen == 0 || initScreen == null) {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => OnboardingScreenOne()),
+        (Route<dynamic> route) => false,
+      );
+    } else {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => WelcomeScreen()),
+        (Route<dynamic> route) => false,
+      );
+    }
   }
 
   @override
