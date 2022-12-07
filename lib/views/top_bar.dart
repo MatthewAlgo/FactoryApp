@@ -2,6 +2,9 @@ import 'package:factoryapp/login/screens/Welcome/welcome_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+// Import google fonts
+import 'package:google_fonts/google_fonts.dart';
+
 PreferredSizeWidget getAppBarForApp(BuildContext context) {
   return AppBar(
     backgroundColor: Color.fromARGB(221, 113, 142, 237),
@@ -13,6 +16,7 @@ PreferredSizeWidget getAppBarForApp(BuildContext context) {
     title: Text(
       'FactoryApp',
     ),
+    
     actions: [
       Row(
         children: [

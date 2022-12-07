@@ -13,6 +13,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 // Import shared preferences
 import 'package:shared_preferences/shared_preferences.dart';
 
+// Import providers
+import 'package:factoryapp/providers/options_list_provider.dart';
+import 'package:provider/provider.dart';
+
 int initScreen = 0;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +27,9 @@ Future<void> main() async {
   initScreen = await prefs.getInt('initScreen') ?? 0;
   await prefs.setInt('initScreen', 1);
 
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create:(context) => BottomViewListProvider(),)
+  ], child: const MyApp()));
 }
 
 // TODO: Email verification
@@ -64,7 +70,11 @@ class MyApp extends StatelessWidget {
               borderSide: BorderSide.none,
             ),
           )),
-      home: const Splash(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Splash(),
+        '/welcome': (context) => const WelcomeScreen(),
+      },
     );
   }
 }

@@ -1,10 +1,15 @@
+// import the welcome screen
 import 'package:factoryapp/login/screens/Welcome/welcome_screen.dart';
 import 'package:factoryapp/main.dart';
 import 'package:factoryapp/splash/flutterlogo.dart';
+import 'package:factoryapp/views/home_screen.dart';
 import 'package:flutter/material.dart';
 
 // Import onboarding screen 1
 import 'package:factoryapp/onboarding/screen_one.dart';
+
+// Import firebase auth
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -30,11 +35,20 @@ class _SplashState extends State<Splash> {
         (Route<dynamic> route) => false,
       );
     } else {
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => WelcomeScreen()),
-        (Route<dynamic> route) => false,
-      );
+      // If the user is logged in, show the home screen
+      if (FirebaseAuth.instance.currentUser != null) {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => HomeView()),
+          (Route<dynamic> route) => false,
+        );
+      } else {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => WelcomeScreen()),
+          (Route<dynamic> route) => false,
+        );
+      }
     }
   }
 

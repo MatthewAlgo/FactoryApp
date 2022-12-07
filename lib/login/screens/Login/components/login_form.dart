@@ -1,4 +1,4 @@
-import 'package:factoryapp/home/home_screen.dart';
+import 'package:factoryapp/views/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/already_have_an_account_acheck.dart';
